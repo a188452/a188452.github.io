@@ -1,22 +1,26 @@
 <p>1</p>
-<video controls >
-     <source src="https://d1.xia12345.com/video/202204/6246917dd287231edf808ce2/hd.mp4" type="video/mp4">
-</video>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+    </head>
 
+    <body>
+        <video id="video" src="https://d1.xia12345.com/video/202204/6246917dd287231edf808ce2/hd.mp4" controls="controls" autoplay height="100%" width="100%">您的浏览器不支持。</video>
+        <button type="button" style="text-align: center;" onclick="launchFullScreen(document.getElementById('video'))">全屏</button>
+    </body>
 
-<p>2</p>
-<video controls >
-     <source src="https://d1.xia12345.com/video/202204/6246917dd287231edf808ce1/hd.mp4" type="video/mp4">
-</video>
-
-
-<p>3</p>
-<video controls >
-     <source src="https://d1.xia12345.com/video/202204/6246917dd287231edf808cdf/hd.mp4" type="video/mp4">
-</video>
-
-
-<p>4</p>
-<video controls >
-     <source src="https://d1.xia12345.com/video/202204/6246917dd287231edf808cde/hd.mp4" type="video/mp4">
-</video>
+    <script type="text/javascript">
+    //全屏幕播放
+    function launchFullScreen(element) {
+      if(element.requestFullScreen) {
+        element.requestFullScreen();
+      } else if(element.mozRequestFullScreen) {
+        element.mozRequestFullScreen();
+      } else if(element.webkitRequestFullScreen) {
+        element.webkitRequestFullScreen();
+      }
+    }
+    </script>
+</html>
